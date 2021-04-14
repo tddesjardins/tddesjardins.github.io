@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+  Heavily cribbed some things from Josh Peek's website at jegpeek.space
+-->
+<html>
+	<head>
+		<title>tdesjardins</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/headshot_web.png" alt="" /></span>
+							<h1 id="title">Tyler D. Desjardins</h1>
+							<p>Staff Scientist II</p>
+              <p>Roman Space Telescope</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<!--<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>-->
+								<li><a href="#technical" id="technical-link"><span class="icon solid fa-satellite">Technical Work</span></a></li>
+                <li><a href="#science" id="science-link"><span class="icon solid fa-atom">Science Interests</span></a></li>
+                <li><a href="#personal" id="personal-link"><span class="icon solid fa-cat">Personal</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.github.com/tddesjardins" class="icon brands fa-github"><span class="label">Github</span></a></li>
+              <li><a href="mailto:desjard@stsci.edu" class="icon fa-envelope"><span class="label">E-Mail</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">I'm <strong>Tyler Desjardins</strong>, <br />
+								a member of the technical staff at the <br />
+                <a href="http://www.stsci.edu">Space Telescope Science Institute</a>.</h2>
+								<p>I am a Ph.D. scientist working within the Science Operations Center for<br />
+                  the upcoming <a href="https://roman.gsfc.nasa.gov/">Nancy Grace Roman Space Telescope</a> NASA flagship mission.
+                </p>
+                <p>
+							</header>
+
+							<footer>
+								<!-- <a href="#portfolio" class="button scrolly">Magna Aliquam</a> -->
+                <span class="peekmagic"><a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-6905-1859&sort=date+desc" class="icon fa-edit">ADS Publications</a></span>
+                <span class="peekmagic"><a href="cv_public.pdf" class="icon solid fa-graduation-cap">CV</a></span>
+                <span class="peekmagic"><a href="mailto:desjard@stsci.edu" class="icon fa-envelope">E-mail</a></span>
+							</footer>
+
+						</div>
+					</section>
+
+          <!-- About Me -->
+            <section id="technical" class="two">
+              <div class="container">
+
+                <header>
+                  <h2>Technical Work</h2>
+                </header>
+
+                <div class="row">
+  								<div class="col-4 col-12-mobile">
+  									<article class="item">
+  										<a href="https://hubblesite.org/contents/media/images/2021/03/4797-Image" class="image fit"><img src="images/roman_deep.png" alt="" /></a>
+  										<header>
+  											<h4>Roman Data</h4>
+                          <h3>
+                            I am currently working with the Data Management System in the Roman Science Operations Center to help define the Roman data format
+                            for the Wide Field Instrument, as well as coordinating efforts to create example/test data for development and scientific validation
+                            of the data pipeline.  The Data Management Division at STScI is in charge of the software development, and is planning to re-use as much
+                            of the James Webb data pipeline as possible; however, there are some important differences between James Webb and Roman that necessitate
+                            changes to both the pipeline and the reference files, and this is the focus of my work.
+                          </h3>
+  										</header>
+  									</article>
+  								</div>
+
+                  <div class="col-4 col-12-mobile">
+                    <article class="item">
+                      <a href="https://www.stsci.edu/roman" class="image fit"><img src="images/roman.jpg" alt="" /></a>
+                      <header>
+                        <h4>Roman Coordinate Systems</h4>
+                          <h3>
+                            The science instrument aperture file (SIAF) is used by the ground systems as part of guide star tracking
+                            as well as populating metadata in science files during the calibration pipeline. I have been leading the development
+                            and delivery of the Roman SIAF, including making decisions regarding the user-facing coordinate systems and how they transform
+                            to sky- and observatory-based frames.
+                          </h3>
+                      </header>
+                    </article>
+                  </div>
+
+                  <div class="col-4 col-12-mobile">
+                    <article class="item">
+                      <a href="https://www.stsci.edu/hst/instrumentation/acs" class="image fit"><img src="images/acs_logo_transparent.png" alt="" /></a>
+                      <header>
+                        <h4>HST/ACS Reference Files</h4>
+                          <h3>
+                            I spearheaded development of a modernized pipeline for the creation of HST/ACS reference files.
+                            This includes dark, bias, and sink pixel files used by the science calibration pipeline. This work was
+                            done using Python 3 and a MySQL database server, along with a Flask-powered dashboard for generating
+                            diagnostic reports.
+                          </h3>
+                      </header>
+                    </article>
+                  </div>
+                </div>
+
+                <br />
+
+                <div class="row">
+
+                  <div class="col-4 col-12-mobile">
+                    <article class="item">
+                      <a href="https://hubblesite.org/contents/media/images/2004/10/1491-Image.html" class="image fit"><img src="images/v838mon.jpg" alt="" /></a>
+                      <header>
+                        <h4>ACS Polarimetry</h4>
+                          <h3>
+                            I worked on recalibrating the ACS/WFC polarizing filters and updating inconsistencies in the documentation. I also took the initiative to develop
+                            code in the <a href=https://github.com/spacetelescope/acstools">ACS Tools</a> Python package to simplify the calculation of polarization properties
+                            measured from ACS photometry. With Dean Hines, I co-led the effort to investigate the possibility of using ACS as a spectropolarimeter.
+                          </h3>
+                      </header>
+                    </article>
+                  </div>
+
+                  <div class="col-4 col-12-mobile">
+                    <article class="item">
+                      <a href="https://www.stsci.edu/hst/instrumentation/acs" class="image fit"><img src="images/gain_flat.png" alt="" /></a>
+                      <header>
+                        <h4>ACS/WFC Calibration Projects</h4>
+                          <h3>
+                            I have been involved in various calibration-related projects to support the ACS Wide Field Channel. These projects have covered
+                            many aspects of the ACS/WFC CCDs, and include:
+                            leading the development of an absolute gain monitor program that now executes every year, investigating the read
+                            noise history (and anomalies) of the detectors, and adivising on the efficacy of the monthly CCD annealing program.
+                          </h3>
+                      </header>
+                    </article>
+                  </div>
+
+                  <div class="col-4 col-12-mobile">
+                    <article class="item">
+                      <a href="https://www.stsci.edu/hst" class="image fit"><img src="images/hubble.jpg" alt="" /></a>
+                      <header>
+                        <h4>Hubble Help Desk & Documentation</h4>
+                          <h3>
+                            I previously served as the Hubble Space Telescope Help Desk Lead during the early transition to using the Service Now platform.
+                            In this role, I organized the general help desk staffing and coordinated with the various instrument help desks, as well as my counterpart
+                            on the James Webb Space Telescope. I was also heavily involved in modernizing the Hubble documentation to the <a href="https://hst-docs.stsci.edu">HDox</a>
+                            documentation system, while further updating many aspects of the HST and ACS Data Handbooks to remove out of date information (e.g., IRAF). I also initially
+                            organized development of Jupyter notebooks as examples of ACS data calibration/analysis and assisted in the development of notebooks for AstroDrizzle.
+                          </h3>
+                      </header>
+                    </article>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </section>
+
+            <section id="science" class="three">
+  						<div class="container">
+
+  							<header>
+  								<h2>Science Interests</h2>
+  							</header>
+
+  							<p>My science background focuses on extragalactic observational astronomy, and I have
+                  mainly used X-ray imaging spectroscopy and optical imaging data. I have extensive experience
+                  using the Advanced Camera for Surveys (ACS) and Wide Field Planetary Camera 2 (WFPC2) instruments
+                  on the Hubble Space Telescope, as well as the Advanced CCD Imaging Spectrometer (ACIS) instrument on
+                  the Chandra X-ray Observatory, and several ground-based observing facilities.
+                </p>
+
+                <p>
+                  A complete listing of scientific publications I have been involved with can be found on the <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-6905-1859&sort=date+desc">NASA ADS</a>.<br />
+                  My Ph.D. thesis can be found at the <a href="https://ir.lib.uwo.ca/etd/2283/">University of Western Ontario thesis archive</a>.
+                </p>
+
+  							<div class="row">
+  								<div class="col-4 col-12-mobile">
+  									<article class="item">
+  										<a href="https://esahubble.org/images/heic1413a/" class="image fit"><img src="images/ngc5548.jpg" alt="" /></a>
+  										<header>
+  											<h4>Active Galactic Nuclei</h4>
+                          <h3>
+                            Supermassive black holes in the centers of galaxies are the most powerful persistent sources of energy in the Universe.
+                            Using multi-wavelength observations, we can begin to untangle their mysteries and peer into the engines in the hearts of galaxies.
+                            As an undergraduate, I examined optical SDSS AGN variability and its relationship with black hole mass calculated from SDSS spectroscopy.
+                            In my Ph.D. thesis, I also identified AGN candidates in the Coma Cluster using X-ray, optical, infrared, and radio selection criteria.
+                          </h3>
+  										</header>
+  									</article>
+  								</div>
+
+  								<div class="col-4 col-12-mobile">
+                    <article class="item">
+  										<a href="https://hubblesite.org/contents/media/images/2009/25/2575-Image.html" class="image fit"><img src="images/stephans_quintet.jpg" alt="" /></a>
+  										<header>
+  											<h4>Environmental Galaxy Evolution</h4>
+                          <h3>
+                            The environments of galaxies have a significant impact on their evolution, from galactic canabalism to major mergers with nearby
+                            companions to ram pressure stripping in cluster halos. The effects of these processes over cosmic time shape our view of the nearby Universe,
+                            and understanding them is key to understanding both the past and future of galaxies. In my Ph.D. thesis, I examined the diffuse X-ray emission
+                            around and between galaxies in compact groups. As a postdoc, I generated photometric catalogs of galaxies in the ESO Distant Cluster Survey (EDisCS)
+                            using multiple ground-based observatories.
+                          </h3>
+  										</header>
+  									</article>
+  								</div>
+
+  								<div class="col-4 col-12-mobile">
+  									<article class="item">
+  										<a href="https://www.cfa.harvard.edu/news/massive-black-hole-smashes-record" class="image fit"><img src="images/ic10x1.jpg" alt="" /></a>
+  										<header>
+  											<h4>X-ray Binaries</h4>
+                          <h3>
+                            X-ray binaries consist of a star and a compact object in a system. Relationships have been observed between
+                            population of X-ray binaries in galaxies and the galaxy stellar mass (low-mass binaries) as well as the
+                            star formation rate (high mass binaries). As a masters student, I examined these relationships in nearby, face-on spiral galaxies
+                            using Chandra ACIS and Hubble ACS observations to search for probable optical counterparts to X-ray point sources. This helped to
+                            disentangle the low- and high-mass X-ray binary populations for a more accurate analysis of these scaling relationships in other galaxies.
+                          </h3>
+  										</header>
+  									</article>
+  								</div>
+  							</div>
+
+  						</div>
+  					</section>
+
+
+					<section id="personal" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Personal</h2>
+							</header>
+
+							<p>
+                I am originally from central Florida, but have lived up and down the U.S. east coast.
+                I also lived in Ontario, Canada, where I did my Ph.D. and in Lawrence, Kansas as a postdoc.
+                In 2017, I brought my orange kitty Catsby along with me as we headed back east to Baltimore, Maryland.
+                We've settled down in a house in the northeast corner of the city, where I've spent my pandemic
+                isolation developing my new gardening hobby. I have recently been growing plants from seed,
+                planting up lots of containers, setting up an irrigation system, and making plans for more
+                landscaping over the next couple years.
+              </p>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/catsby1.jpg" alt="" /></a>
+										<header>
+											<h4>The Great Catsby</h4>
+                      <h3>
+                        I found this little fluffball in 2015 at the <a href="https://lawrencehumane.org/">Lawrence Human Society</a>
+                        in Lawrence, Kansas. She was in pretty rough shape, and just a year old. They named her The Great Catsby, and I thought that it
+                        was so cute that I kept it. We've been best friends ever since,
+                        and she loves everyone she meets.
+                      </h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/plants1.jpg" alt="" /></a>
+										<header>
+											<h4>Gardening</h4>
+                      <h3>
+                        Since buying my first home, I've become a fan of gardening. I love learning about lots of different
+                        kinds of plants and trying to grow them. Some are fussy, some are easy, and they all have interesting temperments.
+                        This is an example of a container I planted up in Spring 2021 with snap dragons, bacopa, and heuchera, which is
+                        starting to take over a bit!
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/ffxiv.jpg" alt="" /></a>
+										<header>
+											<h4>Gaming</h4>
+                      <h3>
+                        For the last several years, I've become an avid video gamer and even stream on Twitch occasionally.
+                        I mostly play role playing games such as Final Fantasy XIV, Subnautica, and Divinity Original Sin, with
+                        the occasional 4X game like Civilization mixed in.
+                      </h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2021 Tyler Desjardins. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
