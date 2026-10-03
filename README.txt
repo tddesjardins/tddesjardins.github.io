@@ -1,40 +1,68 @@
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Tyler Desjardins — professional portfolio
+=======================================
 
+Next.js App Router, React, TypeScript, and Tailwind CSS. The site exports
+static HTML for https://tddesjardins.github.io; it requires no backend.
 
-This is Prologue, a simple, single page responsive site template. It features a
-clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+Local development (Node.js 22 or newer)
+--------------------------------------
+  npm ci
+  npm run dev
 
-Demo content images* are courtesy of the ridiculously talented Felicia Simion. Check out
-more of her amazing work over at deviantART:
+Open http://localhost:3000.
 
-http://ineedchemicalx.deviantart.com/
+Validation and production preview
+---------------------------------
+  npm run lint
+  npm run build
+  python3 -m http.server 3000 --directory out
 
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Felicia's work without her explicit permission!)
+The build checks TypeScript and generates the deployable site in out/.
+Preview out/ with a static server, not npm start (which requires a Next.js
+server and does not support static exports). There was no existing test
+suite; browser checks cover section navigation, mobile menu, card counts,
+image loading, CV availability, and reduced-motion behavior.
 
-Demo banner images* courtesy of Unsplash, a radtastic collection of CC0 (public domain)
-images you can use for pretty much whatever.
+Editing content
+---------------
+Project, science, and personal cards: components/content.tsx
+Introduction, section descriptions, and footer: app/page.tsx
+Shared navigation: components/links.ts
+Colors, typography, and responsive styling: app/globals.css
+SEO metadata: app/layout.tsx
+CV: public/cv_public.pdf
+Images: public/images/
 
-(* = Not included)
+The original image and CV URLs remain available. Cards use pre-optimized
+WebP assets; when replacing an image, also update its WebP version and alt
+text. Next Image uses unoptimized mode because GitHub Pages has no image
+optimization server. Below-the-fold images are lazy-loaded. Typography
+uses system fonts, with no external font requests.
 
-AJ
-aj@lkn.io | @ajlkn
+Deployment
+----------
+In repository Settings > Pages, choose "GitHub Actions" as the source.
+The workflow in .github/workflows/pages.yml lints and builds pull requests,
+and deploys pushes to main (or manual runs on main) to GitHub Pages.
+Only the deployment job receives Pages write and OIDC permissions.
+The user-site domain serves from /, so no basePath is required.
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+Accessibility
+-------------
+Keyboard navigation, visible focus styles, a skip link, descriptive image
+alt text, semantic landmarks, and a labeled mobile menu are included.
+Content is statically rendered; scroll reveals never hide it without
+JavaScript. Reduced-motion preferences disable animations and smooth scroll.
 
+Dependency audit note
+---------------------
+The current ESLint/Next lint configuration depends transitively on braces
+3.0.3, affected by GHSA-vfj7-8cjw-p6xm with no published patched version.
+This is a development-only glob-pattern parser, not part of the deployed
+static website. Do not pass untrusted glob patterns to lint tooling;
+monitor upstream updates. npm audit --omit=dev checks runtime dependencies.
 
-Credits:
-
-	Demo Images:
-		Felicia Simion (ineedchemicalx.deviantart.com)
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Legacy template
+---------------
+The unused assets/ directory and LICENSE.txt remain from the previous
+HTML5 UP Prologue template. They are not imported by the new application.
